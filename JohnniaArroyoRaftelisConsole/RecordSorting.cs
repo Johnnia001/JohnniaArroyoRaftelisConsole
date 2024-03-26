@@ -5,15 +5,14 @@ using System.Linq;
 
 class Record
 {
-    public string Pin { get; set; }
-    public string Address { get; set; }
-    public string Owner { get; set; }
+    public string Pin { get; set; } = string.Empty;
+    public string Address { get; set; } = string.Empty;
+    public string Owner { get; set; } = string.Empty;
     public decimal MarketValue { get; set; }
     public DateTime SaleDate { get; set; }
     public decimal SalePrice { get; set; }
-    public string Link { get; set; }
+    public string Link { get; set; } = string.Empty;
 
-    //print all columns
     public override string ToString()
     {
         return $"{Pin}|{Address}|{Owner}|{MarketValue}|{SaleDate}|{SalePrice}|{Link}";
@@ -24,7 +23,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Record> records = File.ReadAllLines("/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/Parcels.txt")
+        List<Record> records = File.ReadAllLines("Parcels.txt")
                                    .Skip(1)
                                    .Select(line =>
                                    {
@@ -43,13 +42,12 @@ class Program
                                    })
                                    .ToList();
 
-        // Sort Street Name
+        // Sort
         var sortedRecords = records.OrderBy(r => r.Address.Split(' ')[1])
-        // Sort Street Number
                                    .ThenBy(r => int.Parse(r.Address.Split(' ')[0]));
 
-        // Print all columns
         Console.WriteLine("Sorted Records:");
+        Console.WriteLine("==============");
         foreach (var record in sortedRecords)
         {
             Console.WriteLine(record);
