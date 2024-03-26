@@ -42,13 +42,27 @@ class Program
                                    })
                                    .ToList();
 
-        // Sort
-        var sortedRecords = records.OrderBy(r => r.Address.Split(' ')[1])
-                                   .ThenBy(r => int.Parse(r.Address.Split(' ')[0]));
+        // Sort by street name and then by street number
+        var sortedByStreet = records.OrderBy(r => r.Address.Split(' ')[1])
+                                    .ThenBy(r => int.Parse(r.Address.Split(' ')[0]));
 
-        Console.WriteLine("Sorted Records:");
-        Console.WriteLine("==============");
-        foreach (var record in sortedRecords)
+        Console.WriteLine("Sorted by Street:");
+        Console.WriteLine("=================");
+        foreach (var record in sortedByStreet)
+        {
+            Console.WriteLine(record);
+        }
+
+        // Sort by first name
+        var sortedByFirstName = records.OrderBy(r =>
+        {
+            string[] nameParts = r.Owner.Split(',');
+            return nameParts?.Length > 1 ? nameParts[1].Trim().Split(' ')[0] : string.Empty;
+        });
+
+        Console.WriteLine("\nSorted by First Name:");
+        Console.WriteLine("=================");
+        foreach (var record in sortedByFirstName)
         {
             Console.WriteLine(record);
         }
