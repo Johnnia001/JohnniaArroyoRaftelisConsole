@@ -1,0 +1,14 @@
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/bin/Debug/net8.0/JohnniaArroyoRaftelisConsole
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/bin/Debug/net8.0/JohnniaArroyoRaftelisConsole.deps.json
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/bin/Debug/net8.0/JohnniaArroyoRaftelisConsole.runtimeconfig.json
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/bin/Debug/net8.0/JohnniaArroyoRaftelisConsole.dll
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/bin/Debug/net8.0/JohnniaArroyoRaftelisConsole.pdb
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/obj/Debug/net8.0/JohnniaArroyoRaftelisConsole.GeneratedMSBuildEditorConfig.editorconfig
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/obj/Debug/net8.0/JohnniaArroyoRaftelisConsole.AssemblyInfoInputs.cache
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/obj/Debug/net8.0/JohnniaArroyoRaftelisConsole.AssemblyInfo.cs
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/obj/Debug/net8.0/JohnniaArroyoRaftelisConsole.csproj.CoreCompileInputs.cache
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/obj/Debug/net8.0/JohnniaArroyoRaftelisConsole.dll
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/obj/Debug/net8.0/refint/JohnniaArroyoRaftelisConsole.dll
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/obj/Debug/net8.0/JohnniaArroyoRaftelisConsole.pdb
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/obj/Debug/net8.0/JohnniaArroyoRaftelisConsole.genruntimeconfig.cache
+/Users/miti/Raftelis/JohnniaArroyoRaftelisConsole/JohnniaArroyoRaftelisConsole/obj/Debug/net8.0/ref/JohnniaArroyoRaftelisConsole.dll
