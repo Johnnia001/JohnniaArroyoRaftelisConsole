@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Spectre.Console;
 
 class Record
 {
@@ -53,10 +54,7 @@ class Program
 
         Console.WriteLine("Sorted by Street:");
         Console.WriteLine("=================");
-        foreach (var record in sortedByStreet)
-        {
-            Console.WriteLine(record);
-        }
+        RenderTable(sortedByStreet);
 
         // Sort by first name
         var sortedByFirstName = records.OrderBy(r =>
@@ -67,9 +65,34 @@ class Program
 
         Console.WriteLine("\nSorted by First Name:");
         Console.WriteLine("=================");
-        foreach (var record in sortedByFirstName)
+        RenderTable(sortedByFirstName);
+    }
+
+    static void RenderTable(IEnumerable<Record> records)
+    {
+        var table = new Table();
+        table.AddColumn(new TableColumn("PIN").Centered().Header(new Markup("[bold red]PIN[/]")));
+        table.AddColumn(new TableColumn("Address").Centered().Header(new Markup("[bold red]Address[/]")));
+        table.AddColumn(new TableColumn("Owner").Centered().Header(new Markup("[bold red]Owner[/]")));
+        table.AddColumn(new TableColumn("Market Value").Centered().Header(new Markup("[bold red]Market Value[/]")));
+        table.AddColumn(new TableColumn("Sale Date").Centered().Header(new Markup("[bold red]Sale Date[/]")));
+        table.AddColumn(new TableColumn("Sale Price").Centered().Header(new Markup("[bold red]Sale Price[/]")));
+        table.AddColumn(new TableColumn("Link").Centered().Header(new Markup("[bold red]Link[/]")));
+        table.AddColumn(new TableColumn("Google Maps").Centered().Header(new Markup("[bold red]Google Maps[/]")));
+
+        foreach (var record in records)
         {
-            Console.WriteLine(record);
+            table.AddRow(
+                record.Pin,
+                record.Address,
+                record.Owner,
+                record.MarketValue.ToString("C"),
+                record.SaleDate.ToShortDateString(),
+                record.SalePrice.ToString("C"),
+                record.Link,
+                record.GoogleMapsLink);
         }
+
+        AnsiConsole.Write(table);
     }
 }
