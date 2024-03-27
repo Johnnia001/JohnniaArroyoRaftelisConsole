@@ -27,7 +27,6 @@ Example:
 ## Run the Application:
 
 Execute the compiled application using the .NET CLI:
-arduino
 
 `dotnet run`
 ## View Sorted Records:
