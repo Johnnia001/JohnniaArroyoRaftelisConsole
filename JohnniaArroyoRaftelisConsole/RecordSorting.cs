@@ -12,10 +12,11 @@ class Record
     public DateTime SaleDate { get; set; }
     public decimal SalePrice { get; set; }
     public string Link { get; set; } = string.Empty;
+    public string GoogleMapsLink { get; set; } = string.Empty;
 
     public override string ToString()
     {
-        return $"{Pin}|{Address}|{Owner}|{MarketValue}|{SaleDate}|{SalePrice}|{Link}";
+        return $"{Pin}|{Address}|{Owner}|{MarketValue}|{SaleDate}|{SalePrice}|{Link}|{GoogleMapsLink}";
     }
 }
 
@@ -29,6 +30,9 @@ class Program
                                    {
                                        string[] parts = line.Split('|');
                                        DateTime.TryParse(parts[4], out DateTime saleDate);
+
+                                       string googleMapsLink = $"https://www.google.com/maps?q={Uri.EscapeDataString(parts[1] + ", Mazama, WA")}";
+
                                        return new Record
                                        {
                                            Pin = parts[0],
@@ -37,7 +41,8 @@ class Program
                                            MarketValue = decimal.Parse(parts[3]),
                                            SaleDate = saleDate,
                                            SalePrice = decimal.Parse(parts[5]),
-                                           Link = parts[6]
+                                           Link = parts[6],
+                                           GoogleMapsLink = googleMapsLink
                                        };
                                    })
                                    .ToList();
